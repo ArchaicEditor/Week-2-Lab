@@ -16,3 +16,4 @@ MonoBehaviour:
   itemName: Poison
   icon: {fileID: 21300000, guid: 211b88a3be945a348aa2a482837e952f, type: 3}
   stackable: 1
+  maxStack: 8

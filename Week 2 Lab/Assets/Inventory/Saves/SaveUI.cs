@@ -3,23 +3,28 @@ using UnityEngine;
 public class SaveUI : MonoBehaviour
 {
 
-    public InventoryData inventory;
+    public InventoryData inventor;
     public ItemDatabase database;
     public string password;
 
 
     public void Save(string password)
     {
-        PasswordInventorySystem.Save(inventory, password);
+        PasswordInventorySystem.Save(inventor, password);
+
+        Debug.Log("Saved");
     }
 
     public void Load(string password)
     {
         bool success =
             PasswordInventorySystem.Load(
-                inventory, database, password);
+                inventor, database, password);
 
         if (!success)
             Debug.Log("Wrong password!");
     }
+
+    
+
 }
